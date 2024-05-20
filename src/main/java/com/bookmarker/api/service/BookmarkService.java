@@ -23,7 +23,7 @@ public class BookmarkService {
 //    public List<Bookmark> getBookmarks(Integer page) {
     public BookmarksDTO getBookmarks(Integer page) {
         int pageNo = page < 1 ? 0 : page - 1;
-        Pageable pageable = PageRequest.of(pageNo, 10, Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(pageNo, 5, Sort.Direction.DESC, "id");
         Page<Bookmark> bookmarkPage = repository.findAll(pageable);
         return new BookmarksDTO(bookmarkPage);
     }
