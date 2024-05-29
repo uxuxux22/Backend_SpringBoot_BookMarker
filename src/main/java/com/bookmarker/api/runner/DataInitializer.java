@@ -12,7 +12,6 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-@Profile("dev")
 public class DataInitializer implements CommandLineRunner {
     private final BookmarkRepository repository;
 
